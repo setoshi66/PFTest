@@ -25,25 +25,28 @@
 // export default App;
 
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './Login';
-import MainMenu from './MainMenu';
-import Lists from './Lists';
+import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const App = () => {
+const Login = () => {
+  const navigate = useNavigate();
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" component={Login} />
-        {/* <Route path="/main" component={MainMenu} /> */}
-        <Route path="" element={<Login/>} />
-        <Route path="/" element={<Login/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/main" element={<MainMenu/>} />
-        <Route path="/lists" element={<Lists/>} />
-      </Routes>
-    </BrowserRouter>
+    <div>
+      <div>ユーザー名<input type='text'></input></div>
+      <div>パスワード<input type='password'></input></div>
+      <div>
+        <Button
+          sx={{ m: 1 }}
+          size='large'
+          variant="contained"
+          onClick={() => {
+            navigate('/main');
+          }}
+        >ログイン</Button>
+      </div>
+    </div>
   );
 }
 
-export default App;
+export default Login;

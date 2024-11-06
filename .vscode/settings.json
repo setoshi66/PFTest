@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/1617255f-dca1-4e22-bbf8-d3427fdb99b5/resourceGroups/learn-b06a390d-bbfe-4616-8329-4b27d829ece4/providers/Microsoft.Web/sites/PFTest",
+    "appService.deploySubpath": "."
+}
