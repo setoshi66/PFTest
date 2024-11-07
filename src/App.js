@@ -8,7 +8,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" component={Login} />
+        {/* <Route path="/" component={Login} /> */}
         {/* <Route path="/main" component={MainMenu} /> */}
         <Route path="" element={<Login/>} />
         <Route path="/" element={<Login/>} />

@@ -8,12 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import BookmarkBorderIcon from '@mui/icons-material/BookmarkBorder';
 
-// export default function ButtonUsage() {
-//   return <Button variant="contained">Hello world</Button>;
-// }
-
-
-
 const rows = [
   { id: 1, name: 'シミュレーション1', proccess: '計算済み', favorite: true },
   { id: 2, name: 'シミュレーション2', proccess: '計算済み', favorite: false },
