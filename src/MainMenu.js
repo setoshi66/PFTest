@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './MainMenu.css'
 import Button from '@mui/material/Button';
+import Header from './components/Header';
 import Lists from './Lists';
 import { useNavigate } from "react-router-dom";
 
@@ -8,6 +9,7 @@ const MainMenu = () => {
   const navigate = useNavigate();
   return (
     <div className={styles.body}>
+      <Header></Header>
       <div>
         <h2>メインメニュー</h2>
       </div>
@@ -41,7 +43,7 @@ const MainMenu = () => {
       <div><h2>プロジェクト一覧</h2></div>
       <Lists></Lists>
     </div>
-    
+
   );
 }
 
