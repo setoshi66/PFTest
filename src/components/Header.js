@@ -1,18 +1,20 @@
 import React from 'react';
-import styles from './Header.css'
+import styles from "./Header.module.css";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
     const navigate = useNavigate();
     return (
         <div className={styles.header}>
-            <span onClick={() => {
+            <div onClick={() => {
                 navigate('/main');
-            }}>システム名</span>
-            <span onClick={() => {
+            }}>システム名</div>
+            <div onClick={() => {
                 navigate('/main');
-            }}>画像</span>
-            <span>小山</span>
+            }}>
+                <img src='..\logo.svg' alt=""></img>
+                <span>小山 竜太</span>
+            </div>
         </div>
     );
 }

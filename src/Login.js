@@ -1,13 +1,15 @@
 import React from 'react';
+import styles from './Login.module.css'
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const navigate = useNavigate();
   return (
-    <div>
-      <div>ユーザー名<input type='text'></input></div>
-      <div>パスワード<input type='password'></input></div>
+    <div className={styles.login}>
+      <h2>システム名</h2>
+      <div><input type='text' placeholder='ID入力'></input></div>
+      <div><input type='password' placeholder='パスワード入力'></input></div>
       <div>
         <Button
           sx={{ m: 1 }}
@@ -17,6 +19,10 @@ const Login = () => {
             navigate('/main');
           }}
         >ログイン</Button>
+      </div>
+      <div>
+      <span>アカウント新規作成</span>
+      <span>パスワードを忘れた場合</span>
       </div>
     </div>
   );

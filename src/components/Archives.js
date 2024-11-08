@@ -1,7 +1,8 @@
 import React from 'react';
-import styles from './Lists.module.css'
+import styles from './Archives.module.css'
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+import Header from './Header';
 import { DataGrid } from '@mui/x-data-grid';
 import Paper from '@mui/material/Paper';
 import IconButton from '@mui/material/IconButton';
@@ -22,8 +23,9 @@ const rows = [
 
 const paginationModel = { page: 0, pageSize: 6 };
 
-const Lists = () => {
+const Archives = () => {
   const [favorite, setFavorite] = useState(false);
+  console.log(favorite);
   const columns = [
     { field: 'id', headerName: 'ID', width: 70 },
     { field: 'name', headerName: 'シミュレーション名', width: 180 },
@@ -77,8 +79,11 @@ const Lists = () => {
           </IconButton>
     },
   ];
-  return (
+  return (    
     <div className={styles.body}>
+      <Header></Header>
+      <div><input type='text' /></div>
+      <div><Button>パラメータ確認/修正</Button></div>
       {/* <Button
         sx={{ m: 1 }}
         size='large'
@@ -101,4 +106,4 @@ const Lists = () => {
   );
 }
 
-export default Lists;
+export default Archives;

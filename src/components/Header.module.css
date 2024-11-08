@@ -1,0 +1,9 @@
+.header {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+    background-color: #074687;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}

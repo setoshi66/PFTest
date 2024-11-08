@@ -1,22 +1,27 @@
 import React from 'react';
+import styles from './App.module.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import MainMenu from './MainMenu';
-import Lists from './Lists';
+import Simulation from './components/Simulation';
+import Archives from './components/Archives';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* <Route path="/" component={Login} /> */}
-        {/* <Route path="/main" component={MainMenu} /> */}
-        <Route path="" element={<Login/>} />
-        <Route path="/" element={<Login/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/main" element={<MainMenu/>} />
-        <Route path="/lists" element={<Lists/>} />
-      </Routes>
-    </BrowserRouter>
+    <div className={styles.App}>
+      <BrowserRouter>
+        <Routes>
+          {/* <Route path="/" component={Login} /> */}
+          {/* <Route path="/main" component={MainMenu} /> */}
+          <Route path="" element={<Login />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/main" element={<MainMenu />} />
+          <Route path="/simulation" element={<Simulation />} />
+          <Route path="/archives" element={<Archives />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
